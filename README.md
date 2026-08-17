@@ -5,7 +5,7 @@ Official agent skills for creating and managing AI comics with LlamaGen.
 ## Install
 
 ```bash
-npx skills add llamagen-ai/skills
+npx skills add LlamaGenAI/skills
 ```
 
 The installer adds the `llamagen-comics` skill. On first use, the skill installs `@llamagen/cli` when needed and guides browser-based authentication without copying browser cookies into the terminal.
