@@ -1,0 +1,4 @@
+interface:
+  display_name: "LlamaGen Comics"
+  short_description: "Create and manage AI comics with LlamaGen"
+  default_prompt: "Use $llamagen-comics to create a comic from my prompt and wait for the finished result."
