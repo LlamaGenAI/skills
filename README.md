@@ -8,7 +8,7 @@ Official agent skills for creating and managing AI comics with LlamaGen.
 npx skills add llamagen-ai/skills
 ```
 
-The installer adds the `llamagen-comics` skill. On first use, the skill installs the `@llamagen/cli` beta when needed and guides browser-based authentication without copying browser cookies into the terminal.
+The installer adds the `llamagen-comics` skill. On first use, the skill installs `@llamagen/cli` when needed and guides browser-based authentication without copying browser cookies into the terminal.
 
 ## First-phase capabilities
 
@@ -22,12 +22,15 @@ The installer adds the `llamagen-comics` skill. On first use, the skill installs
 ## Manual setup
 
 ```bash
-npm install --global @llamagen/cli@beta
-llamagen config set site-url https://next.llamagen.ai
+npm install --global @llamagen/cli
 llamagen auth login
 ```
 
-Documentation: https://llamagen.ai/mcp
+## Links
+
+- CLI source: https://github.com/LlamaGenAI/cli
+- Skills source: https://github.com/LlamaGenAI/skills
+- Documentation: https://llamagen.ai/mcp
 
 ## License
 

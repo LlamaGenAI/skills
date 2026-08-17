@@ -15,25 +15,19 @@ Use `@llamagen/cli` as the only command-line integration. Keep authentication in
    llamagen version
    ```
 
-2. If it is missing, install the current beta:
+2. If it is missing, install the official CLI:
 
    ```bash
-   npm install --global @llamagen/cli@beta
+   npm install --global @llamagen/cli
    ```
 
-3. During the beta rollout, select the preview authentication site unless the user supplied another site:
-
-   ```bash
-   llamagen config set site-url https://next.llamagen.ai
-   ```
-
-4. Check authentication:
+3. Check authentication:
 
    ```bash
    llamagen auth status
    ```
 
-5. If authentication is missing or invalid, run the browser flow:
+4. If authentication is missing or invalid, run the browser flow:
 
    ```bash
    llamagen auth login
@@ -44,8 +38,8 @@ Use `@llamagen/cli` as the only command-line integration. Keep authentication in
 For a custom environment, keep the browser site and Comic API independently configurable:
 
 ```bash
-llamagen config set site-url https://next.llamagen.ai
-llamagen config set api-url https://api.llamagen.ai
+llamagen config set site-url https://staging.example.com
+llamagen config set api-url https://api.staging.example.com
 ```
 
 Use `LLAMAGEN_SITE_URL`, `LLAMAGEN_API_URL`, and `LLAMAGEN_API_KEY` only for explicit automation or CI requirements. Never print their values.
@@ -128,7 +122,7 @@ Explain that logout removes the local CLI credential only. It does not sign the 
 
 - Authentication missing or rejected: run `llamagen auth login` once, then retry the original operation.
 - API unreachable: show the configured API hostname and suggest checking `llamagen config get api-url`; never show a token.
-- Preview login endpoint unavailable: confirm `site-url` is `https://next.llamagen.ai` during beta.
+- Custom login endpoint unavailable: inspect `llamagen config get site-url`, then restore the production default with `llamagen config unset site-url` when appropriate.
 - Invalid generation or panel input: report the exact ID or numeric argument that needs correction.
 - Timeout: preserve the generation ID and use `llamagen comic get` rather than resubmitting and charging twice.
 - Unknown CLI behavior: run the relevant command with `help` before constructing unsupported flags.
