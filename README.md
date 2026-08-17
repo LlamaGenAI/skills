@@ -17,7 +17,7 @@ The installer adds the `llamagen-comics` skill. On first use, the skill installs
 - Comic creation and generation lookup
 - Continue-writing and panel regeneration
 - Comic API usage checks
-- Independent preview-site and API-domain configuration
+- Independent authentication-site and API-domain configuration for isolated tests
 
 ## Manual setup
 
